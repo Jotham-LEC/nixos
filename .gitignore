@@ -1,0 +1,21 @@
+result
+result-*
+
+.direnv/
+
+# Claude Code: agent-shell transcripts + machine-local settings + worktrees
+.agent-shell/
+.claude/settings.local.json
+.claude/worktrees/
+
+# Ephemeral scratch. Disposable by definition — nothing committed may cite a
+# tmp/ path, and nothing in here survives a clean checkout.
+tmp/
+.scratch/
+
+# Secrets are sops-encrypted in secrets/*.yaml and ARE committed -- they are
+# ciphertext. These guard against plaintext landing here by accident: the old
+# env-file channel, and any staging file left behind mid-encrypt. See INSTALL.md.
+secrets.env
+secrets/.staging.yaml
+secrets/*.plain.yaml

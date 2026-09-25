@@ -1,0 +1,117 @@
+@import "colors.rasi"
+
+configuration {
+    font: "Aporetic Sans Mono 14";
+    matching: "fuzzy";
+    drun-match-fields: "name,generic,categories,keywords";
+    drun-display-format: "{name}";
+}
+
+
+window {
+    width:            40%;
+    background-color: @bg;
+    border:           2px;
+    border-color:     @accent;
+    border-radius:    8px;
+    padding:          0;
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+    padding:  0;
+    spacing:  0;
+}
+
+inputbar {
+    background-color: @bg-alt;
+    text-color:       @fg;
+    padding:          8px 12px;
+    spacing:          8px;
+    children:         [ prompt, entry ];
+}
+
+prompt {
+    background-color: @bg-alt;
+    text-color:       @accent;
+}
+
+entry {
+    background-color:  @bg-alt;
+    text-color:        @fg;
+    placeholder-color: @fg-dim;
+}
+
+listview {
+    background-color: @bg;
+    scrollbar:        true;
+    fixed-height:     true;
+    padding:          0;
+    spacing:          0;
+    border:           2px solid 0px 0px;
+    border-color:     @line;
+}
+
+scrollbar {
+    background-color: @bg-alt;
+    handle-color:     @accent;
+    handle-width:     4px;
+}
+
+element {
+    padding: 6px 12px;
+    spacing: 8px;
+}
+
+element normal.normal {
+    background-color: @bg;
+    text-color:       @fg-dim;
+}
+
+element alternate.normal {
+    background-color: @bg-alt;
+    text-color:       @fg-dim;
+}
+
+element selected.normal {
+    background-color: @sel-bg;
+    text-color:       @sel-fg;
+}
+
+element normal.urgent,
+element alternate.urgent {
+    background-color: @bg;
+    text-color:       @red;
+}
+
+element selected.urgent {
+    background-color: @red;
+    text-color:       @bg;
+}
+
+element normal.active,
+element alternate.active {
+    background-color: @bg;
+    text-color:       @green;
+}
+
+element selected.active {
+    background-color: @green;
+    text-color:       @bg;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    vertical-align:   0.5;
+}
+
+message {
+    background-color: @bg-alt;
+    padding:          8px 12px;
+}
+
+textbox {
+    background-color: @bg-alt;
+    text-color:       @fg;
+}

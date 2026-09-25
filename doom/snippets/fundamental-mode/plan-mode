@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: plan-mode
+# key: plan-mode
+# --
+
+Provide a confidence score of your plan. Only execute if your confidence is above 98%. You are encouraged to use context7, perform diagnostic exploration, mini experiments, or ask me as many questions as needed to help provide context to improve your confidence score. Also consider alternatives to the tooling or methodology that might provider better ROI.

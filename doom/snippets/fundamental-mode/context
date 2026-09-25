@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: context
+# uuid:
+# key: context
+# condition: t
+# --
+
+You are encouraged to ask me as many questions as possible to provide sufficient context to assist in your task.
